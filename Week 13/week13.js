@@ -24,28 +24,50 @@ console.log(currentDay);
 //Задание 5
 // Создайте переменную birthday и присвойте ей дату вашего дня рождения в текущем году. Значение выведите в консоль.
 
-const birthday = 
+const birthday = new Date(2023, 11, 21);
+console.log(birthday); 
 
 //Задание 6
 // Создайте переменную futureDate и присвойте ей будущую дату (например, через 1 месяц и 10 дней от текущей даты). Значение выведите в консоль.
 
+const futureDate = new Date();
+futureDate.setMonth(futureDate.getMonth() + 1) + futureDate.setDate(futureDate.getDate() + 10);
+console.log(futureDate);
+
 //Задание 7
 // Выведите в консоль разницу в днях между futureDate и currentDate
+
+console.log(Math.floor((futureDate - currentDate) / (1000 * 60 * 60 * 24) % 30));
 
 //Задание 8
 // Создайте переменную pastDate и присвойте ей прошедшую дату (например, 5 дней назад от текущей даты). Значение выведите в консоль.
 
+const pastDate = new Date();
+pastDate.setDate(pastDate.getDate() - 5);
+console.log(pastDate);
+
 //Задание 9
 // Выведите в консоль разницу в днях между currentDate и pastDate
+console.log(Math.floor((currentDate - pastDate) / (1000 * 60 * 60 * 24) % 30));
 
 //Задание 10
 // Создайте переменную nextWeek и присвойте ей дату следующей недели. Значение выведите в консоль.
 
+const nextWeek = new Date ();
+nextWeek.setDate(nextWeek.getDate() + 7);
+console.log(nextWeek);
+
 //Задание 11
 // Выведите в консоль день недели для nextWeek
+console.log(nextWeek.getDay()); //2
+let options = { weekday: "long" };
+console.log(new Intl.DateTimeFormat("en-US", options).format(nextWeek)); // Tuesday
+console.log(new Intl.DateTimeFormat("ru-RU", options).format(nextWeek)); // вторник
 
 //Задание 12
 // Создайте переменную futureYear и присвойте ей значение текущего года плюс 5. Значение выведите в консоль.
+
+
 
 //Задание 13
 // Создайте переменную futureDateInFutureYear и присвойте ей дату вашего дня рождения в будущем году (futureYear). Значение выведите в консоль.
