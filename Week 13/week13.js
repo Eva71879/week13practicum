@@ -76,6 +76,7 @@ const futureDateInFutureYear = new Date ();
 futureDateInFutureYear.setFullYear((birthday.getFullYear() + 1), [birthday.getMonth()], [birthday.getDate()]);
 console.log(futureDateInFutureYear);
 
+
 //Задание 14
 // Выведите в консоль разницу в годах между futureYear и текущим годом
 console.log(futureYear - currentYear);
