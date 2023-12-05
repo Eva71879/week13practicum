@@ -24,7 +24,7 @@ console.log(currentDay);
 //Задание 5
 // Создайте переменную birthday и присвойте ей дату вашего дня рождения в текущем году. Значение выведите в консоль.
 
-const birthday = new Date (currentYear, [11], [21]);
+const birthday = new Date (currentYear, 11, 21);
 console.log(birthday); 
 
 //Задание 6
@@ -139,8 +139,15 @@ if (number %3 === 0) {
 //Задание 21
 // Используя цикл if...else, проверьте является ли переменная number однозначным. Результат выведите в консоль.
 
-if (number <= 9) {
-    console.log('число ' + number + ' однозначное');
+// if (number <= 9) {
+//     console.log('число ' + number + ' однозначное');
+// } else {
+//     console.log('число ' + number + ' многозначное');
+// }
+
+// вариант Кота:
+if (number.toString().length === 1) {
+    console.log(`${number} - однозначное`);
 } else {
     console.log('число ' + number + ' многозначное');
 }
@@ -148,11 +155,19 @@ if (number <= 9) {
 //Задание 22
 // Используя цикл if...else, проверьте является ли переменная number двузначным. Результат выведите в консоль.
 
-if (number >=10 && number <=99) {
-    console.log('число ' + number + ' двузначное');
+// if (number >=10 && number <=99) {
+//     console.log('число ' + number + ' двузначное');
+// } else {
+//     console.log('число ' + number + ' не двузначное');
+// }
+
+// вариант Кота
+if (number.toString().length === 2) {
+    console.log (`${number} - двузначное`)
 } else {
     console.log('число ' + number + ' не двузначное');
 }
+
 
 //Задание 23
 // Используя цикл if...else, проверьте является ли переменная number положительным или нулём. Результат выведите в консоль.
@@ -200,8 +215,14 @@ else {
 //Задание 26
 // Используя цикл if...else, проверьте является ли переменная number трёхзначным положительным числом. Результат выведите в консоль.
 
-if (number >99 && number<999) {
-    console.log('число ' + number + ' трехзначное');
+// if (number >99 && number<999) {
+//     console.log('число ' + number + ' трехзначное');
+// } else {
+//     console.log('число ' + number + ' не трехзначное');
+// }
+// вариант Кота
+if (number.toString().length===3) {
+    console.log(`${number} - трехзначное`);
 } else {
     console.log('число ' + number + ' не трехзначное');
 }
